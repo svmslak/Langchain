@@ -29,7 +29,7 @@ def main():
     )
 
     #llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
-    llm = ChatOllama(model="minicpm-v:latest", temperature=0)
+    llm = ChatOllama(model="llama3.2-vision:11b", temperature=0)
     chain = prompt | llm
     result = chain.invoke(input={"information": information})
     print(result)
